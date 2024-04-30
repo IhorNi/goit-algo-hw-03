@@ -12,6 +12,11 @@
 - **Обробка винятків**.
     - Код має правильно обробляти винятки, наприклад, помилки доступу до файлів або директорій.
 
+### Приклад
+```
+python task_1/copy_folder.py --source_dir task_1/source_directory 
+python task_1/copy_folder.py --source_dir task_1/source_directory task_1/destination_directory
+```
 
 ## Завдання 2
 
