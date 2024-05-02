@@ -10,7 +10,7 @@ def copy_files(source_dir, dest_dir, current_dir=''):
 
             if os.path.isfile(item_path):
                 ext = os.path.splitext(item)[1]
-                ext_dest_dir = os.path.join(dest_dir, ext.strip('.'), current_dir)
+                ext_dest_dir = os.path.join(dest_dir, ext.strip('.'))
                 os.makedirs(ext_dest_dir, exist_ok=True)
                 shutil.copy2(item_path, ext_dest_dir)
 
@@ -35,7 +35,7 @@ def main():
         print(f"SourceDirectoryNotFoundError: Source directory '{args.source_dir}' does not exist.")
         return
 
-    print(f"Start copying files from {args.source_dir} to {args.dest_dir}")
+    print(f"Copying files from {args.source_dir} to {args.dest_dir}")
 
     os.makedirs(args.dest_dir, exist_ok=True)
 
